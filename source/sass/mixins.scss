@@ -1,0 +1,22 @@
+@mixin tablet-width {
+  max-width: 768px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+@mixin container {
+  box-sizing: border-box;
+  padding: 15px;
+  width: 100%;
+}
+
+
+@mixin font-text {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: left;
+  vertical-align: bottom;
+  margin: 0;
+}
+

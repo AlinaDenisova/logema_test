@@ -1,0 +1,83 @@
+.id-card {
+  background-color: #E3EBD3;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    align-items: flex-end;
+  }
+
+  &__text {
+    display: inline-block;
+
+    &--left {
+      text-align: left;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    &--right {
+      text-align: right;
+    }
+  }
+
+  &__text-wrapper {
+    @include font-text;
+    font-family: "notosans", "Arial", sans-serif;
+    max-width: 220px;
+    position: relative;
+
+    &--left {
+      display:  inline-block;
+      
+
+      &:after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        width: 800%;
+        left: auto;
+        margin-left: 10px;
+        bottom: 6px;
+        vertical-align: baseline;
+        display: inline-block;
+        vertical-align: baseline;
+        border-bottom: 1px dashed #000000;
+      }
+    }
+
+    &--right {
+      display: inline-block;
+      margin-bottom: 6px;
+      text-align: right;
+
+      &:before {
+        content: ''; 
+        position: absolute;
+        display: inline-block;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        vertical-align: baseline;
+        border-bottom: 1px dashed #000000;
+      }
+    }
+  }
+
+  &__text-wrapper-line {
+    display: inline;
+    position: relative;
+    box-shadow: 0px 5px 0 10px #E3EBD3;
+    border-width: 100%;
+    padding-left: 0px;
+    margin-right: 0px;
+  }
+}
+

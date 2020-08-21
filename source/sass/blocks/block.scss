@@ -1,0 +1,120 @@
+.block {
+  background-color: #FFAA87;
+  display: flex;
+  min-height: 155px;
+  align-items: flex-end;
+
+  &--1 {
+    grid-area: a;
+    background: #E8EBED;
+
+  }
+
+  &--2 {
+    grid-area: b;
+    background: #E8EBED;
+  }
+
+  &--3 {
+    grid-area: c;
+    background: #E8EBED;
+  }
+
+  &--4 {
+    grid-area: d;
+    background: #90BCE8;
+    
+  }
+
+  &--5 {
+    grid-area: e;
+    background: #FEBF26;
+  }
+
+  &--6 {
+    text-align: center;
+    font-size: 18px;
+    line-height: 26px;
+    color: #FFFFFF;
+    background: #A2A9B7;
+
+  }
+
+  &--7,
+  &--8 {
+    min-height: 102px;
+    min-width: 102px;
+    font-size: 21px;
+    line-height: 30px;
+    color: #FFFFFF;
+    background: #A2A9B7;
+  }
+
+  &--9 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: #E3EBD3;
+  }
+
+  &--10 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: #E3EBD3;
+  }
+
+  &--11 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    background-color: #E3EBD3;
+  }
+
+  &--12 {
+    grid-area: l;
+    background: #FFAA87;
+  }
+
+  &--13 {
+    grid-area: m;
+    background: #FFAA87;
+  }
+
+  &--14 {
+    grid-area: n;
+    background: #C7ABD4;
+
+  }
+
+  &--15 {
+    grid-area: o;
+    background: #FFAA87;
+  }
+
+  &--16 {
+    grid-area: p;
+    background: #F55E62;
+
+  }
+
+  &--square {
+    height: 66vw;
+    overflow-y: auto;
+    align-items: flex-start;
+    grid-row: 1/-1;
+
+    @media (min-width: $until-tablet-width) {
+      width: 100%;
+      height: 63.97vw;
+      max-width: 493.6px;
+      max-height: 493.6px;
+     }
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__text {
+    @include font-text;
+  }
+}
+
