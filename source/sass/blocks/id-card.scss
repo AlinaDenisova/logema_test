@@ -1,16 +1,18 @@
 .id-card {
-  background-color: #E3EBD3;
+  background-color: #e3ebd3;
 
   &__list {
+    @include container;
     margin: 0;
     padding: 0;
     list-style: none;
+    padding: 15px 15px 15px 18px;
   }
 
   &__item {
     display: flex;
     justify-content: space-between;
-    padding: 20px 0;
+    padding-bottom: 28px;
     align-items: flex-end;
   }
 
@@ -33,39 +35,32 @@
     font-family: "notosans", "Arial", sans-serif;
     max-width: 220px;
     position: relative;
+    display: inline-block;
 
     &--left {
-      display:  inline-block;
-      
-
-      &:after {
-        content: '';
+      &::after {
+        content: "";
         position: absolute;
-        display: inline-block;
         width: 800%;
         left: auto;
         margin-left: 10px;
-        bottom: 6px;
-        vertical-align: baseline;
+        bottom: 0;
         display: inline-block;
-        vertical-align: baseline;
         border-bottom: 1px dashed #000000;
       }
     }
 
     &--right {
-      display: inline-block;
-      margin-bottom: 6px;
+
       text-align: right;
 
-      &:before {
-        content: ''; 
+      &::before {
+        content: "";
         position: absolute;
         display: inline-block;
         width: 100%;
         bottom: 0;
         left: 0;
-        vertical-align: baseline;
         border-bottom: 1px dashed #000000;
       }
     }
@@ -74,10 +69,9 @@
   &__text-wrapper-line {
     display: inline;
     position: relative;
-    box-shadow: 0px 5px 0 10px #E3EBD3;
+    box-shadow: -4px 10px 0 8px #e3ebd3;
     border-width: 100%;
-    padding-left: 0px;
-    margin-right: 0px;
+    padding-left: 0;
+    margin-right: 0;
   }
 }
-

@@ -5,7 +5,7 @@
   "description": "Тестовое задание",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
-    "autoprefixer": "8.3.x",
+    "autoprefixer": "^9.8.6",
     "browser-sync": "2.23.x",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
