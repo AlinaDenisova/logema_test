@@ -48,7 +48,7 @@ gulp.task("html", function () {
 gulp.task("copy", function () {
   return gulp.src([
       "source/fonts/**/*.{woff,woff2}",
-      "source/img/**"
+      "source/img/**",
   ], {
     base: "source"
   })
@@ -65,7 +65,9 @@ gulp.task("style", function() {
     .pipe(plumber())
     .pipe(sass())
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer({
+        grid: "no-autoplace"
+    })
     ]))
     .pipe(gulp.dest("build/css"))
     .pipe(minify())
@@ -98,7 +100,7 @@ gulp.task("serve", function() {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
-//  gulp.watch("source/js/**/*.js", ["jsmin"]);
+  // gulp.watch("source/js/**/*.js", ["jsmin"]);
   gulp.watch("source/*.html", ["html"]);
 });
 
