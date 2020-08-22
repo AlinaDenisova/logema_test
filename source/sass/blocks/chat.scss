@@ -41,7 +41,7 @@
       margin-right: 0;
     }
   }
-  
+
   &__person-avatar {
     display: block;
     margin-right: auto;
@@ -50,7 +50,7 @@
   }
 
   &__message {
-    max-width: 470px;  
+    max-width: 470px;
   }
 
   &__message-content {
@@ -68,9 +68,9 @@
       position: absolute;
       top: 5px;
       left: -6px;
-      width: 0px;
-      height: 0px;
-      border-top: 0px solid transparent;
+      width: 0;
+      height: 0;
+      border-top: 0 solid transparent;
       border-bottom: 10px solid transparent;
       border-right: 10px solid #ffffff;
     }
@@ -81,7 +81,7 @@
         position: absolute;
         right: -6px;
         left: auto;
-        border-left: 10px solid #fff;
+        border-left: 10px solid #ffffff;
         border-right: 0 solid transparent;
       }
     }
@@ -151,10 +151,10 @@
     background-color: #0f54b9;
     text-decoration: none;
     border-radius: 21px;
-  
+
     &:hover,
     &:active {
       background-color: rgba(#0f54b9, 0.8%);
-    }  
+    }
   }
 }

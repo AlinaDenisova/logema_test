@@ -6,7 +6,7 @@
     grid-template-columns: 48.5vw 48.5vw;
     grid-template-rows: auto auto;
     grid-gap: 10px;
-    grid-template-areas: 
+    grid-template-areas:
       "a b"
       "c c"
       "d e"
@@ -37,17 +37,13 @@
   }
 
   &__block-group {
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-gap: 10px;
+    @include for-ie {
+      margin-bottom: 10px;
+    }
 
     &--1 {
       grid-area: f;
-      grid-template-columns: 67% 31%;
-
-      @media (min-width: $until-tablet-width) {
-        grid-template-columns: 2.04fr 1fr;
-      }
+      display: flex;
     }
 
     &--2 {
@@ -55,8 +51,7 @@
 
       @media (min-width: $until-tablet-width) {
         grid-area: i;
-        display: grid;
-        grid-template-columns: 1.05fr 2.1fr
+        display: flex;
       }
     }
   }
