@@ -36,15 +36,6 @@ gulp.task("html", function () {
     .pipe(gulp.dest("build"));
 });
 
-// gulp.task("sprite", function () {
-//   return gulp.src("source/img/sprite/*.svg")
-//     .pipe(svgstore({
-//       inlineSvg: true
-//     }))
-//     .pipe(rename("sprite.svg"))
-//     .pipe(gulp.dest("build/img"));
-// });
-
 gulp.task("copy", function () {
   return gulp.src([
       "source/fonts/**/*.{woff,woff2}",
@@ -76,20 +67,6 @@ gulp.task("style", function() {
     .pipe(server.stream());
 });
 
-// gulp.task("scripts", function() {
-//   return gulp.src('source/js/*.js')
-//     .pipe(concat("all.js"))
-//     .pipe(gulp.dest("buld/js"));
-// });
-
-// gulp.task("jsmin", function () {
-//   gulp.src("source/js/*.js")
-//     .pipe(jsmin())
-//     .pipe(rename({suffix: ".min"}))
-//     .pipe(gulp.dest("build/js"))
-//     .pipe(server.stream());
-// });
-
 gulp.task("serve", function() {
   server.init({
     server: "build/",
@@ -100,7 +77,6 @@ gulp.task("serve", function() {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
-  // gulp.watch("source/js/**/*.js", ["jsmin"]);
   gulp.watch("source/*.html", ["html"]);
 });
 

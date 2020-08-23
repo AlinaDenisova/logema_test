@@ -10,23 +10,7 @@
   height: 31vw;
   align-items: flex-start;
   overflow-y: auto;
-
-  &--square {
-    overflow-y: auto;
-    align-items: flex-start;
-    height: 66vw;
-    max-width: 66vw;
-    min-width: 211px;
-    position: relative;
-    margin: auto;
-    max-height: 66vw;
-
-    &::before {
-      content: "";
-      padding-top: 100%;
-      float: left;
-    }
-  }
+  margin-bottom: 0;
 
   &--1 {
     grid-area: a;
@@ -53,9 +37,27 @@
     background: #febf26;
   }
 
+  &--6,
+  &--11 {
+    overflow-y: auto;
+    align-items: flex-start;
+    height: 66vw;
+    max-width: 66vw;
+    min-width: 211px;
+    position: relative;
+    margin: auto;
+    max-height: 66vw;
+
+    &::before {
+      content: "";
+      padding-top: 100%;
+      float: left;
+    }
+  }
+
   &--6 {
     background: #a2a9b7;
-    
+
     @media (min-width: $until-tablet-width) {
       max-width: 66%;
       max-height: 63.9vw;
@@ -103,6 +105,7 @@
     max-width: 241px;
     max-height: 241px;
     margin-bottom: 10px;
+    min-height: auto;
   }
 
   &--10 {
@@ -113,6 +116,7 @@
     height: 100%;
     max-width: 241px;
     max-height: 241px;
+    min-height: auto;
   }
 
   &--11 {
@@ -165,30 +169,6 @@
     &--2 {
       margin-left: 0;
       margin-right: 10px;
-    }
-  }
-
-  &__container {
-    @include container;
-
-    @media (min-width: $until-tablet-width) {
-      padding: 15px 15px 12px 18px;
-    }
-
-    &--square {
-      padding: 20px 15px 13px 13px;
-
-      @media (min-width: $until-tablet-width) {
-        padding: 30px 45px 30px 30px;
-      }
-    }
-
-    &--min {
-      padding: 20px 15px 8px 10px;
-
-      @media (min-width: $until-tablet-width) {
-        padding: 15px;
-      }
     }
   }
 
