@@ -820,7 +820,7 @@ img {
   .chat__message-day {
     overflow: hidden;
     text-align: center;
-    padding-bottom: 20px; }
+    padding-bottom: 40px; }
     .chat__message-day::before, .chat__message-day::after {
       content: "";
       display: inline-block;
